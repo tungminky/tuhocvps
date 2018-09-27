@@ -1,0 +1,9 @@
+Fix the ERROR : "Installation failed: Could not create director" in WordPress on your VPS, use this command : 
+sudo chown -R sammy:www-data /var/www/html
+sudo find /var/www/html -type d -exec chmod g+s {} \;
+sudo chmod g+w /var/www/html/wp-content
+sudo chmod -R g+w /var/www/html/wp-content/themes
+sudo chmod -R g+w /var/www/html/wp-content/plugins
+sudo chown -R www-data /var/www/html
+
+Good Luck
