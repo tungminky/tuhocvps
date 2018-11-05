@@ -1,15 +1,16 @@
-1. Install Certbot
-To install Certbot, simply run the following commands:
-
+1. Cài Certbot:
+Cài certbot trên Ubuntu sử dụng lệnh sau ;
 apt-get install software-properties-common python-software-properties
 add-apt-repository ppa:certbot/certbot
 apt-get update
 apt-get install python-certbot-apache
-2. Install Let’s Encrypt SSL Certificate
-To install a Let’s Encrypt SSL certificate on your domain, execute the following command (make sure you replace ‘yourdomain.com’ with your actual domain name):
 
-certbot --apache -d yourdomain.com
-You will then be asked for an email address and to read and accept the Terms of Services. This is how the output should look like during the installation:
+2. Cài SSl
+Nhập lệnh dưới đây để cài SSL, nhớ thay yourdomain.com bằng tên miền của bạn : 
+
+certbot --nginx -d yourdomain.com
+
+Nhập email của bạn vào khi được hỏi : 
 
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator apache, Installer apache
